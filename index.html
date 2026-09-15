@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jasa kanopi kaca aesthetic dan berkualitas untuk rumah, teras, dan area komersial.">
+  <title>Kanopi Kaca | Elegan & Minimalis</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --coklat-tua: #3d2a20;
+      --coklat: #6f4e37;
+      --coklat-muda: #a98262;
+      --cream: #f7f0e8;
+      --putih: #fffdf9;
+      --teks: #4a382d;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--teks);
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      background: rgba(61, 42, 32, 0.94);
+      backdrop-filter: blur(8px);
+      padding: 16px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #e1c4aa;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 110px 7% 70px;
+      background:
+        linear-gradient(90deg, rgba(61,42,32,.88), rgba(61,42,32,.35)),
+        url("https://i.ibb.co.com/hJrCgVs4/IMG-20260804-WA0062.jpg") center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      font-size: 17px;
+      color: #f2e8df;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--coklat-tua);
+      padding: 14px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #ead7c6;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 85px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: var(--coklat-muda);
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      color: var(--coklat-tua);
+      font-size: 38px;
+      margin-top: 8px;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+      box-shadow: 0 18px 45px rgba(61,42,32,.16);
+    }
+
+    .about-text h2 {
+      color: var(--coklat-tua);
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      color: #665247;
+    }
+
+    /* SERVICES */
+    .services {
+      background: var(--putih);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #f8f1ea;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #eadbd0;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(61,42,32,.1);
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: var(--coklat-tua);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #6b5a4e;
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--coklat-tua);
+      color: white;
+      text-align: center;
+      padding: 75px 7%;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #dfcec0;
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #2b1e18;
+      color: #cdbdb0;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      nav {
+        padding: 14px 5%;
+      }
+
+      nav .menu {
+        display: none;
+      }
+
+      .hero {
+        padding: 110px 6% 60px;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .about-text h2,
+      .cta h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">KANOPI KACA</div>
+    <div class="menu">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <div class="tag">ELEGAN • MINIMALIS • MODERN</div>
+      <h1>Kanopi Kaca untuk Ruang yang Lebih Elegan.</h1>
+      <p>
+        Wujudkan tampilan rumah dan bangunan yang lebih modern dengan
+        kanopi kaca yang rapi, estetik, dan nyaman dipandang.
+      </p>
+      <a class="btn" href="tel:083194185787">Hubungi Kami</a>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="about">
+      <div class="about-image">
+        <img
+          src="https://i.ibb.co.com/hJrCgVs4/IMG-20260804-WA0062.jpg"
+          alt="Contoh kanopi kaca">
+      </div>
+
+      <div class="about-text">
+        <h2>Sentuhan Modern untuk Hunian Anda</h2>
+        <p>
+          Kami menyediakan jasa pembuatan dan pemasangan kanopi kaca
+          untuk mempercantik sekaligus melindungi area rumah dan bangunan.
+        </p>
+        <p>
+          Dengan desain yang clean dan minimalis, kanopi kaca dapat
+          membuat area terasa lebih terang, luas, dan modern.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="layanan">
+    <div class="section-title">
+      <span>Layanan Kami</span>
+      <h2>Solusi Kanopi untuk Kebutuhan Anda</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">⌂</div>
+        <h3>Kanopi Rumah</h3>
+        <p>
+          Cocok untuk carport, teras, balkon, dan area rumah lainnya
+          dengan tampilan minimalis.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✦</div>
+        <h3>Desain Custom</h3>
+        <p>
+          Desain dapat disesuaikan dengan ukuran, kebutuhan, dan
+          karakter bangunan Anda.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Pemasangan Rapi</h3>
+        <p>
+          Mengutamakan hasil pemasangan yang rapi dan tampilan yang
+          selaras dengan bangunan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="kontak">
+    <h2>Siap Membuat Tampilan Lebih Elegan?</h2>
+    <p>Konsultasikan kebutuhan kanopi kaca Anda sekarang.</p>
+    <a class="btn" href="tel:083194185787">0831-9418-5787</a>
+  </section>
+
+  <footer>
+    © 2026 Kanopi Kaca. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
